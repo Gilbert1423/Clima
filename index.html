@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>WeatherView - Aplicación del Clima</title>
+</head>
+<body>
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <div class="container">
+        <div class="app-wrapper">
+            <div class="app-header">
+                <h1 class="titulo">WeatherView</h1>
+                <p class="subtitle">Consulta el clima en cualquier ubicación</p>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="city">
+                        <i class="fas fa-city"></i> Ciudad/País
+                    </button>
+                    <button class="tab-btn" data-tab="coords">
+                        <i class="fas fa-map-marker-alt"></i> Coordenadas
+                    </button>
+                </div>
+                
+                <div class="tab-content active" id="city-tab">
+                    <div class="input-wrapper city-input">
+                        <label for="city">
+                            <i class="fas fa-search-location"></i> Buscar ciudad o país
+                        </label>
+                        <input type="text" id="city" placeholder="Ej: Madrid, Tokyo, New York...">
+                        <button id="searchCity" class="btn-search">
+                            <span class="btn-text">Buscar</span>
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="coords-tab">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <label for="latitud">
+                                <i class="fas fa-map-marker-alt"></i> Latitud
+                            </label>
+                            <input type="text" id="latitud" placeholder="Ej: 40.7128">
+                        </div>
+                        
+                        <div class="input-wrapper">
+                            <label for="longitud">
+                                <i class="fas fa-globe"></i> Longitud
+                            </label>
+                            <input type="text" id="longitud" placeholder="Ej: -74.0060">
+                        </div>
+                    </div>
+                    
+                    <button id="update" class="btn-search">
+                        <span class="btn-text">Obtener clima</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="location-button">
+                    <button id="getLocation" class="btn-location">
+                        <i class="fas fa-location-arrow"></i>
+                        <span>Usar mi ubicación</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="weather-container">
+                <div id="clima" class="weather-card">
+                    <div class="weather-placeholder">
+                        <i class="fas fa-cloud-sun"></i>
+                        <p>Ingresa una ciudad o coordenadas para ver el clima</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2025</p>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
